@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="你瞅啥">
+<meta property="og:title" content="Yang Tao&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="你瞅啥">
+<meta property="og:site_name" content="Yang Tao&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你瞅啥">
+<meta name="twitter:title" content="Yang Tao&#39;s Blog">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>你瞅啥</title>
+  <title>Yang Tao's Blog</title>
   
 
 
@@ -152,12 +152,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">你瞅啥</span>
+        <span class="site-title">Yang Tao's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">慢点，别急</p>
+        <p class="site-subtitle">一个前端长臂猿</p>
       
   </div>
 
@@ -268,7 +268,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="你瞅啥">
+      <meta itemprop="name" content="Yang Tao's Blog">
     </span>
 
     
@@ -352,11 +352,15 @@
       
         
           
-            <h3 id="记录一下-linux-的-vi命令"><a href="#记录一下-linux-的-vi命令" class="headerlink" title="记录一下 linux 的 vi命令"></a>记录一下 linux 的 vi命令</h3><h4 id="待补充"><a href="#待补充" class="headerlink" title="待补充"></a>待补充</h4><p><strong>进入插入模式</strong><br><code>i  从目前光标所在处插入</code><br><code>a  英文小写字母a,从当前光标所在的下一个字符处开始插入</code><br><code>A  英文小写字母A,从光标所在行的最后一个字符处开始插入</code><br><code>o  英文小写字母o，在目前光标所在行的下一行处插入新的一行并开始插入</code><br><code>O  英文大写字母O，在目前光标所在行的上一行处插入新的一行并开始插入</code></p>
-<p><strong>退出插入模式</strong><br><code>[ESC]</code></p>
-<p><strong>一般模式切换到命令行模式</strong><br><code>【:w】 保存文件</code><br><code>【:w!】 若文件为只读，强制保存文件</code><br><code>【:q】 离开vi</code><br><code>【:wq】 保存后离开</code><br><code>【:wq!】 强制保存后离开</code><br><code>【:w newfile】 另存为</code></p>
-
-          
+          记录一下 linux 的 vi命令待补充进入插入模式i  从目前光标所在处插入a  英文小写字母a,从当前光标所在的下一个字符处开始插入A  英文小写字母A,从光标所在行的最后一个字符处开始插入o  英文小写字母o，在目前光标所在行的下一行处插入新的一行并开始插入O  英文大写字母O，在目前光标所在
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/06/vi/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -412,7 +416,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="你瞅啥">
+      <meta itemprop="name" content="Yang Tao's Blog">
     </span>
 
     
@@ -496,17 +500,16 @@
       
         
           
-            <p><strong>Nuxt</strong>–我的理解为<strong>vue</strong>+<strong>SSR</strong></p>
-<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>  公司需要搭建一个前后端分离项目，个人技术选型：vue<br>  |——<br>  老板说：内容呢，给爬虫爬的内容呢？？？改！骂不停嘴的给我改！<br>  我：。。。<br>  |——<br>  然后我就投入了nuxt的 <del>怀抱</del>（坑）～_～<br>  然后项目搭建，然后引入elemengt-ui<br>  打包！<br>  完美！个鬼。。。<br>  这么多css ???<br>  在 </p>
-<blockquote>
-<p>vue.config.js</p>
-</blockquote>
-<p>  内引入</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  build: &#123;</span><br><span class="line">  extractCSS: &#123;allChunks: true&#125;, // 就是这行，你没看错</span><br><span class="line">  extend(config, ctx) &#123;</span><br><span class="line">    // Run ESLint on save</span><br><span class="line">    if (ctx.isDev &amp;&amp; ctx.isClient) &#123;</span><br><span class="line">      // config.module.rules.push(&#123;</span><br><span class="line">      //   enforce: &apos;pre&apos;,</span><br><span class="line">      //   test: /\.(js|vue)$/,</span><br><span class="line">      //   loader: &apos;eslint-loader&apos;,</span><br><span class="line">      //   exclude: /(node_modules)/</span><br><span class="line">      // &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>  <strong>解决</strong></p>
-
-          
+          Nuxt–我的理解为vue+SSR
+背景  公司需要搭建一个前后端分离项目，个人技术选型：vue  |——  老板说：内容呢，给爬虫爬的内容呢？？？改！骂不停嘴的给我改！  我：。。。  |——  然后我就投入了nuxt的 怀抱（坑）～_～  然后项目搭建，然后引入elemengt-ui  打包！ 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/06/background/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -562,7 +565,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="你瞅啥">
+      <meta itemprop="name" content="Yang Tao's Blog">
     </span>
 
     
@@ -624,46 +627,39 @@
       
         
           
-            <h2 id="作为一个前端程序猿，不进步就是退步"><a href="#作为一个前端程序猿，不进步就是退步" class="headerlink" title="作为一个前端程序猿，不进步就是退步"></a>作为一个前端程序猿，不进步就是退步</h2><ol>
-<li><a href="https://www.h5jun.com/" target="_blank" rel="noopener">月影</a></li>
-<li><a href="http://blog.csdn.net/aimingoo/" target="_blank" rel="noopener">周爱民</a></li>
-<li><a href="http://blog.zhaojie.me/winterhttp://winter-cn.cnblogs.com/" target="_blank" rel="noopener">白露飞老赵</a></li>
-<li><a href="https://github.com/lifesinger/blog/issues?q=label%3Abloghaxhttp://hax.iteye.com/CatChenhttp://cathsfz.cnblogs.com/" target="_blank" rel="noopener">玉伯</a></li>
-<li><a href="https://github.com/CatChenhttp://www.ruanyifeng.com/blog/archives.html" target="_blank" rel="noopener">大漠&amp;林小志&amp;阮一峰</a></li>
-<li><a href="http://www.zhangxinxu.com/wordpress/" target="_blank" rel="noopener">张鑫旭</a></li>
-<li><a href="http://www.cnblogs.com/rubylouvre" target="_blank" rel="noopener">司徒正美</a></li>
-<li><a href="http://www.zhangxinxu.com/wordpress/" target="_blank" rel="noopener">张鑫旭</a></li>
-<li><a href="http://www.cnblogs.com/TomXu/" target="_blank" rel="noopener">汤姆大叔</a></li>
-<li><a href="http://www.cnblogs.com/whitewolf/p/angular-input-box-format.html" target="_blank" rel="noopener">破狼</a></li>
-<li><a href="http://www.cnblogs.com/yexiaochai" target="_blank" rel="noopener">叶小钗</a></li>
-<li><a href="http://justjavac.com/" target="_blank" rel="noopener">justjavac(迷渡)</a></li>
-<li><a href="http://html5ify.com/" target="_blank" rel="noopener">朴灵</a></li>
-<li><a href="http://coolshell.cn/" target="_blank" rel="noopener">左耳朵耗子</a></li>
-<li><a href="http://ooxx.me/" target="_blank" rel="noopener">大猫</a></li>
-<li><a href="http://willerce.com/" target="_blank" rel="noopener">未志</a></li>
-<li><a href="https://s5s5.me/LOO2Khttp://loo2k.com/blog/" target="_blank" rel="noopener">米随随</a></li>
-<li><a href="https://imququ.com/JKhttp://www.cnblogs.com/jkisjk/cnberghttp://cnberg.div.io/" target="_blank" rel="noopener">JerryQu（屈光宇）</a></li>
-<li><a href="https://www.ivershuo.com/" target="_blank" rel="noopener">阿肆</a></li>
-<li><a href="https://www.zhuwenlong.com/GMhttps://gmiam.com/Jekyllhttp://haoqiao.me/index.html" target="_blank" rel="noopener">朱文龙</a></li>
-<li><a href="http://cv.heeroluo.net/" target="_blank" rel="noopener">罗礼权</a></li>
-<li><a href="http://jiongks.name/haoroomshttp://www.haorooms.com/" target="_blank" rel="noopener">囧克斯(勾三股四)</a></li>
-<li><a href="http://geek.csdn.net/user/publishlist/chenqiuge1984" target="_blank" rel="noopener">陈秋歌</a></li>
-<li><a href="http://www.cnblogs.com/lhb25/" target="_blank" rel="noopener">梦想天空</a></li>
-<li><a href="https://github.com/aui?tab=repositories" target="_blank" rel="noopener">糖饼</a></li>
-<li><a href="http://ideazhao.com/" target="_blank" rel="noopener">怿飞灵感的小窝</a></li>
-<li><a href="https://yuguo.us/weblog/yiminghehttps://blog.yiminghe.me/2013/09/26/blog-migration/Toobughttps://www.toobug.net/" target="_blank" rel="noopener">余果</a></li>
-<li><a href="http://www.cnblogs.com/jikey/" target="_blank" rel="noopener">豪情</a></li>
-<li><a href="http://blog.f2er.net/" target="_blank" rel="noopener">情封</a></li>
-<li><a href="http://www.barretlee.com/blog/archives/" target="_blank" rel="noopener">小胡子哥</a></li>
-<li><a href="http://madscript.com/archive.htmlGrayZhanghttp://www.cnblogs.com/GrayZhangsmallnihttp://www.smallni.com/" target="_blank" rel="noopener">元彦</a></li>
-<li><a href="http://www.cnblogs.com/iamzhanglei/" target="_blank" rel="noopener">当耐特</a></li>
-<li><a href="http://www.cnblogs.com/Darren_code/" target="_blank" rel="noopener">聂微东</a></li>
-<li><a href="https://luolei.org/vilichttp://vilic.info/blog/" target="_blank" rel="noopener">罗磊</a></li>
-<li><a href="http://blog.bingo929.com/" target="_blank" rel="noopener">彬Go</a></li>
-<li><a href="http://blog.csdn.net/ligang2585116" target="_blank" rel="noopener">李刚</a></li>
-</ol>
-
-          
+          作为一个前端程序猿，不进步就是退步
+月影
+周爱民
+白露飞老赵
+玉伯
+大漠&amp;林小志&amp;阮一峰
+张鑫旭
+司徒正美
+张鑫旭
+汤姆大叔
+破狼
+叶小钗
+justjavac(迷渡)
+朴灵
+左耳朵耗子
+大猫
+未志
+米随随
+JerryQu（屈光宇）
+阿肆
+朱文龙
+罗礼权
+囧克斯(勾三股四)
+陈秋歌
+梦
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/06/frontBlog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -719,7 +715,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="你瞅啥">
+      <meta itemprop="name" content="Yang Tao's Blog">
     </span>
 
     
@@ -781,9 +777,16 @@
       
         
           
-            <h3 id="博客第一步–markdown学习之路"><a href="#博客第一步–markdown学习之路" class="headerlink" title="博客第一步–markdown学习之路"></a>博客第一步–markdown学习之路</h3><p><a href="https://www.jianshu.com/p/191d1e21f7ed" target="_blank" rel="noopener">这是个学习的超链接</a></p>
+          博客第一步–markdown学习之路这是个学习的超链接
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/06/markdown/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
